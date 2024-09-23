@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Wed Jul 31 22:30:42 BDT 2024","Wed Jul 31 22:30:42 BDT 2024","2","All Test Suite","F:/javabasic & sqa/WebAutomationProject","Testcases.TestLoginPage","Testcases.TestLoginPage","loadpage","loadpage",""
+"passed","Thu Aug 01 18:17:47 BDT 2024","Thu Aug 01 18:18:09 BDT 2024","21757","All Test Suite","F:/javabasic & sqa/WebAutomationProject","Testcases.TestHomePage","Testcases.TestHomePage","testHomePageTitle","Loading home page","Home page"
+"passed","Thu Aug 01 18:18:17 BDT 2024","Thu Aug 01 18:18:45 BDT 2024","28424","All Test Suite","F:/javabasic & sqa/WebAutomationProject","Testcases.TestLoginPage","Testcases.TestLoginPage","test_login_with_valid_credentials","Test with valid username and password","User trying to login with valid credentials"
