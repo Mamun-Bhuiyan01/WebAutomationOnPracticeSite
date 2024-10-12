@@ -11,15 +11,15 @@
             <class name="Testcases.TestLoginPage">
                 <methods>
                     <include name="test_login_with_valid_credentials"/>
-                    <exclude name="test_login_with_invalid_password"/>
-                    <exclude name="test_login_with_wrong_email"/>
-                    <exclude name="test_login_with_invalid_email"/>
-                    <exclude name="test_login_with_without_email"/>
-                    <exclude name="test_login_with_without_password"/>
-                    <exclude name="test_login_with_without_credentials"/>
-                    <exclude name="test_login_with_wrong_credentials"/>
-                    <exclude name="test_login_with_invalid_email_password"/>
-                    <exclude name="test_login_with_invalid_credentials"/>
+                    <include name="test_login_with_invalid_password"/>
+                    <include name="test_login_with_wrong_email"/>
+                    <include name="test_login_with_invalid_email"/>
+                    <include name="test_login_with_without_email"/>
+                    <include name="test_login_with_without_password"/>
+                    <include name="test_login_with_without_credentials"/>
+                    <include name="test_login_with_wrong_credentials"/>
+                    <include name="test_login_with_invalid_email_password"/>
+                    <include name="test_login_with_invalid_credentials"/>
                 </methods>
             </class>
         </classes>

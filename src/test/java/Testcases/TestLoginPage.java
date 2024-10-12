@@ -27,8 +27,8 @@ public class TestLoginPage extends DriverSetup{
     @Severity(SeverityLevel.BLOCKER)
     public void test_login_with_valid_credentials(){
 
-        loginPage.writeonelement(loginPage.loginemail, "shobuj@yopmail.com");
-        loginPage.writeonelement(loginPage.loginpassword,"shobuj123");
+        loginPage.writeonelement(loginPage.loginemail, "mamun01@yopmail.com");
+        loginPage.writeonelement(loginPage.loginpassword,"mamun123");
         loginPage.addScreenshot("After entering the valid credentials");
         loginPage.clickonelement(loginPage.loginbutton);
         loginPage.addScreenshot("After click on the login button");
@@ -40,8 +40,8 @@ public class TestLoginPage extends DriverSetup{
     @Test
     public void test_login_with_invalid_password(){
 
-        loginPage.writeonelement(loginPage.loginemail, "shobuj@yopmail.com");
-        loginPage.writeonelement(loginPage.loginpassword,"shobuj12");
+        loginPage.writeonelement(loginPage.loginemail, "mamun01@yopmail.com");
+        loginPage.writeonelement(loginPage.loginpassword,"mamun12");
         loginPage.clickonelement(loginPage.loginbutton);
         Assert.assertEquals(loginPage.getelementtext(loginPage.errormessage), "Your email or password is incorrect!");
         Assert.assertTrue(loginPage.getdisplaystatus(loginPage.loginbutton));
@@ -51,8 +51,8 @@ public class TestLoginPage extends DriverSetup{
     @Test
     public void test_login_with_wrong_email(){
 
-        loginPage.writeonelement(loginPage.loginemail, "shobuj@yopmai.com");
-        loginPage.writeonelement(loginPage.loginpassword,"shobuj123");
+        loginPage.writeonelement(loginPage.loginemail, "mamun01@yopmai.com");
+        loginPage.writeonelement(loginPage.loginpassword,"mamun123");
         loginPage.clickonelement(loginPage.loginbutton);
         Assert.assertEquals(loginPage.getelementtext(loginPage.errormessage), "Your email or password is incorrect!");
         Assert.assertTrue(loginPage.getdisplaystatus(loginPage.loginbutton));
@@ -61,10 +61,10 @@ public class TestLoginPage extends DriverSetup{
     @Test
     public void test_login_with_invalid_email(){
 
-        loginPage.writeonelement(loginPage.loginemail, "shobuj.com");
-        loginPage.writeonelement(loginPage.loginpassword,"shobuj12");
+        loginPage.writeonelement(loginPage.loginemail, "mamun01.com");
+        loginPage.writeonelement(loginPage.loginpassword,"mamun12");
         loginPage.clickonelement(loginPage.loginbutton);
-        Assert.assertEquals(loginPage.getattributetext(loginPage.loginemail, "validationMessage"), "Please include an '@' in the email address. 'shobuj.com' is missing an '@'.");
+        Assert.assertEquals(loginPage.getattributetext(loginPage.loginemail, "validationMessage"), "Please include an '@' in the email address. 'mamun01.com' is missing an '@'.");
         Assert.assertTrue(loginPage.getdisplaystatus(loginPage.loginbutton));
 
     }
@@ -73,7 +73,7 @@ public class TestLoginPage extends DriverSetup{
     public void test_login_with_without_email(){
 
         //loginPage.writeonelement(loginPage.loginemail, "");
-        loginPage.writeonelement(loginPage.loginpassword,"shobuj12");
+        loginPage.writeonelement(loginPage.loginpassword,"mamun12");
         loginPage.clickonelement(loginPage.loginbutton);
         Assert.assertEquals(loginPage.getattributetext(loginPage.loginemail, "validationMessage"), "Please fill out this field.");
         Assert.assertTrue(loginPage.getdisplaystatus(loginPage.loginbutton));
@@ -83,8 +83,8 @@ public class TestLoginPage extends DriverSetup{
     @Test
     public void test_login_with_without_password(){
 
-        loginPage.writeonelement(loginPage.loginemail, "shobuj@yopmail.com");
-        //loginPage.writeonelement(loginPage.loginpassword,"shobuj12");
+        loginPage.writeonelement(loginPage.loginemail, "mamun01@yopmail.com");
+        //loginPage.writeonelement(loginPage.loginpassword,"mamun12");
         loginPage.clickonelement(loginPage.loginbutton);
         Assert.assertEquals(loginPage.getattributetext(loginPage.loginpassword, "validationMessage"), "Please fill out this field.");
         Assert.assertTrue(loginPage.getdisplaystatus(loginPage.loginbutton));
@@ -94,8 +94,8 @@ public class TestLoginPage extends DriverSetup{
     @Test
     public void test_login_with_without_credentials(){
 
-        //loginPage.writeonelement(loginPage.loginemail, "shobuj@yopmail.com");
-        //loginPage.writeonelement(loginPage.loginpassword,"shobuj12");
+        //loginPage.writeonelement(loginPage.loginemail, "mamun01@yopmail.com");
+        //loginPage.writeonelement(loginPage.loginpassword,"mamun12");
         loginPage.clickonelement(loginPage.loginbutton);
         Assert.assertEquals(loginPage.getattributetext(loginPage.loginemail, "validationMessage"), "Please fill out this field.");
         Assert.assertTrue(loginPage.getdisplaystatus(loginPage.loginbutton));
@@ -105,8 +105,8 @@ public class TestLoginPage extends DriverSetup{
     @Test
     public void test_login_with_wrong_credentials(){
 
-        loginPage.writeonelement(loginPage.loginemail, "shobuj@abc.com");
-        loginPage.writeonelement(loginPage.loginpassword,"shobuj12");
+        loginPage.writeonelement(loginPage.loginemail, "mamun01@abc.com");
+        loginPage.writeonelement(loginPage.loginpassword,"mamun12");
         loginPage.clickonelement(loginPage.loginbutton);
         Assert.assertEquals(loginPage.getelementtext(loginPage.errormessage), "Your email or password is incorrect!");
         Assert.assertTrue(loginPage.getdisplaystatus(loginPage.loginbutton));
@@ -116,10 +116,10 @@ public class TestLoginPage extends DriverSetup{
     @Test
     public void test_login_with_invalid_email_password(){
 
-        loginPage.writeonelement(loginPage.loginemail, "shobuj.com");
-        loginPage.writeonelement(loginPage.loginpassword," shob uj12");
+        loginPage.writeonelement(loginPage.loginemail, "mamun01.com");
+        loginPage.writeonelement(loginPage.loginpassword," mam un12");
         loginPage.clickonelement(loginPage.loginbutton);
-        Assert.assertEquals(loginPage.getattributetext(loginPage.loginemail, "validationMessage"), "Please include an '@' in the email address. 'shobuj.com' is missing an '@'.");
+        Assert.assertEquals(loginPage.getattributetext(loginPage.loginemail, "validationMessage"), "Please include an '@' in the email address. 'mamun01.com' is missing an '@'.");
         Assert.assertTrue(loginPage.getdisplaystatus(loginPage.loginbutton));
 
     }
